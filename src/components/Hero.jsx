@@ -11,6 +11,12 @@ const Hero = ({ onContactClick }) => {
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-light/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 -z-10"
             />
+            {/* Decorative element (Desktop Only) */}
+            <motion.div
+                animate={{ rotate: [12, 15, 12], scale: [1, 1.05, 1] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-secondary/20 rounded-2xl -z-10 hidden md:block"
+            ></motion.div>
             <motion.div
                 animate={{ scale: [1, 1.1, 1], x: [0, -20, 0] }}
                 transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
@@ -68,9 +74,10 @@ const Hero = ({ onContactClick }) => {
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.6, delay: 0.4 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
                         className="pt-8 grid grid-cols-2 gap-4"
                     >
                         {['Band 8+ Specialists', '1-on-1 Attention', 'Mock Tests Included', 'Flexible Schedule'].map((item) => (
@@ -101,10 +108,9 @@ const Hero = ({ onContactClick }) => {
 
                     {/* Floating Card */}
                     <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0, y: [0, -10, 0] }}
-                        transition={{ y: { duration: 4, repeat: Infinity, ease: "easeInOut" }, default: { duration: 0.6, delay: 0.6 } }}
-                        className="absolute -bottom-8 -left-8 bg-white p-5 rounded-2xl shadow-xl border border-brand-mint flex items-center gap-4 z-20"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="absolute -bottom-4 md:-bottom-8 left-4 md:-left-8 bg-white p-4 md:p-5 rounded-2xl shadow-xl border border-brand-mint flex items-center gap-3 md:gap-4 z-20"
                     >
                         <div className="bg-brand-mint p-3 rounded-full">
                             <span className="text-2xl">🌟</span>

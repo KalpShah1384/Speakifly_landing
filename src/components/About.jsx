@@ -35,8 +35,8 @@ const About = () => {
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     {/* Image / Card Section */}
                     <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="relative"
@@ -95,11 +95,11 @@ const About = () => {
                                 </div>
                             </div>
                         </motion.div>
-                        {/* Decorative element */}
+                        {/* Decorative element (Desktop Only) */}
                         <motion.div
                             animate={{ rotate: [12, 15, 12], scale: [1, 1.05, 1] }}
                             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-secondary/20 rounded-2xl -z-10"
+                            className="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-secondary/20 rounded-2xl -z-10 hidden md:block"
                         ></motion.div>
                     </motion.div>
 
