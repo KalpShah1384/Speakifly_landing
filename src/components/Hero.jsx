@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Hero = ({ onContactClick }) => {
     return (
-        <section className="relative min-h-screen pt-24 flex items-center overflow-hidden bg-gradient-to-br from-brand-mint via-white to-brand-light/30">
+        <section className="relative md:min-h-screen py-20 md:py-24 flex md:items-center bg-gradient-to-br from-brand-mint via-white to-brand-light/30">
             {/* Abstract Background Shapes */}
             <motion.div
                 animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
@@ -93,10 +93,11 @@ const Hero = ({ onContactClick }) => {
                 <div className="relative">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8, rotate: 10 }}
-                        animate={{ opacity: 1, scale: 1, rotate: 2 }}
+                        whileInView={{ opacity: 1, scale: 1, rotate: 2 }}
+                        viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                         whileHover={{ rotate: 0, scale: 1.02 }}
-                        className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white"
+                        className="relative z-10 rounded-[1rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white bg-white aspect-[4/3] md:aspect-auto"
                     >
                         <img
                             src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
@@ -110,27 +111,27 @@ const Hero = ({ onContactClick }) => {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="absolute -bottom-4 md:-bottom-8 left-4 md:-left-8 bg-white p-4 md:p-5 rounded-2xl shadow-xl border border-brand-mint flex items-center gap-3 md:gap-4 z-20"
+                        className="absolute bottom-2 md:-bottom-8 left-2 md:-left-8 bg-white p-3 md:p-5 rounded-2xl shadow-xl border border-brand-mint flex items-center gap-3 md:gap-4 z-20"
                     >
-                        <div className="bg-brand-mint p-3 rounded-full">
-                            <span className="text-2xl">🌟</span>
+                        <div className="bg-brand-mint p-2 md:p-3 rounded-full">
+                            <span className="text-xl md:text-2xl">🌟</span>
                         </div>
                         <div>
-                            <p className="text-sm text-slate-500 font-medium">Average Score</p>
-                            <p className="text-xl font-bold text-brand-primary">Band 7.5+</p>
+                            <p className="text-[10px] md:text-sm text-slate-500 font-medium whitespace-nowrap">Average Score</p>
+                            <p className="text-xs md:text-xl font-bold text-brand-primary whitespace-nowrap">Band 7.5+</p>
                         </div>
                     </motion.div>
 
                     {/* Another Floating Card */}
                     <motion.div
-                        initial={{ opacity: 0, x: 50 }}
+                        initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0, y: [0, 10, 0] }}
                         transition={{ y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }, default: { duration: 0.6, delay: 0.8 } }}
-                        className="absolute -top-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-brand-light z-20 hidden md:block"
+                        className="absolute top-4 md:-top-6 right-4 md:-right-6 bg-white p-2 md:p-4 rounded-xl shadow-lg border border-brand-light z-20"
                     >
                         <div className="flex items-center gap-2">
-                            <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse"></div>
-                            <span className="text-sm font-bold text-slate-700">Live Classes On</span>
+                            <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
+                            <span className="text-[10px] md:text-sm font-bold text-slate-700 whitespace-nowrap">Live Classes On</span>
                         </div>
                     </motion.div>
                 </div>

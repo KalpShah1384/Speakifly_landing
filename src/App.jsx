@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Features from './components/Features';
 import About from './components/About';
+import Comparison from './components/Comparison';
+import Process from './components/Process';
+import Features from './components/Features';
 import Services from './components/Services';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
@@ -24,6 +26,8 @@ function App() {
       <main>
         <Hero onContactClick={() => openModal("IELTS Coaching Interest")} />
         <About />
+        <Comparison />
+        <Process />
         <Features onContactClick={(title) => openModal(`Interest in ${title}`)} />
         <Services onContactClick={(plan) => openModal(`Enrollment: ${plan}`)} />
         <Testimonials />
