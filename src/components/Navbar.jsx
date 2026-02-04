@@ -15,11 +15,34 @@ const Navbar = ({ onContactClick }) => {
     }, []);
 
     const navLinks = [
-        { name: 'Home', href: '#' },
+        { name: 'Home', href: '#home' },
         { name: 'About', href: '#about' },
         { name: 'Coaching Plans', href: '#services' },
         { name: 'Testimonials', href: '#testimonials' },
     ];
+
+    const scrollToSection = (e, href) => {
+        if (e) e.preventDefault();
+        setIsMobileMenuOpen(false);
+
+        // Give the menu time to close
+        setTimeout(() => {
+            const targetId = href.replace('#', '');
+            const element = document.getElementById(targetId);
+            if (element) {
+                const offset = 80;
+                const bodyRect = document.body.getBoundingClientRect().top;
+                const elementRect = element.getBoundingClientRect().top;
+                const elementPosition = elementRect - bodyRect;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }, 150);
+    };
 
     return (
         <motion.nav
@@ -31,12 +54,16 @@ const Navbar = ({ onContactClick }) => {
         >
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 {/* Logo */}
-                <div className="flex items-center gap-2 cursor-pointer">
+                <a
+                    href="#home"
+                    onClick={(e) => scrollToSection(e, '#home')}
+                    className="flex items-center gap-2 cursor-pointer"
+                >
                     <BookOpen className="h-8 w-8 text-brand-primary" />
                     <span className={`text-2xl font-display font-bold ${isScrolled ? 'text-brand-dark' : 'text-brand-dark'}`}>
                         Speakifly
                     </span>
-                </div>
+                </a>
 
                 {/* Desktop Nav */}
                 <div className="hidden md:flex items-center gap-8">
@@ -44,6 +71,7 @@ const Navbar = ({ onContactClick }) => {
                         <a
                             key={link.name}
                             href={link.href}
+                            onClick={(e) => scrollToSection(e, link.href)}
                             className="text-slate-600 hover:text-brand-primary font-medium transition-colors relative group"
                         >
                             {link.name}
@@ -52,7 +80,6 @@ const Navbar = ({ onContactClick }) => {
                     ))}
                     <button
                         onClick={() => {
-                            console.log("Navbar button clicked");
                             onContactClick();
                         }}
                         className="bg-brand-primary hover:bg-brand-secondary text-white px-6 py-2.5 rounded-full font-medium transition-colors shadow-md hover:shadow-brand-primary/30 text-center cursor-pointer"
@@ -80,14 +107,13 @@ const Navbar = ({ onContactClick }) => {
                         className="absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 py-6 px-6 flex flex-col gap-4 md:hidden overflow-hidden"
                     >
                         {navLinks.map((link) => (
-                            <a
+                            <button
                                 key={link.name}
-                                href={link.href}
-                                className="text-brand-dark font-medium text-lg hover:text-brand-primary"
-                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-brand-dark font-medium text-lg hover:text-brand-primary py-2 text-left"
+                                onClick={(e) => scrollToSection(e, link.href)}
                             >
                                 {link.name}
-                            </a>
+                            </button>
                         ))}
                         <button
                             onClick={() => {

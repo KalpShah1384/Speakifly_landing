@@ -37,11 +37,26 @@ const Footer = ({ onContactClick }) => {
                     <div>
                         <h4 className="text-white font-bold text-lg mb-6">Quick Links</h4>
                         <ul className="space-y-4">
-                            {['Home', 'About Us', 'Coaching Plans', 'Success Stories', 'Contact'].map((link) => (
-                                <li key={link}>
-                                    <a href="#" className="hover:text-brand-light transition-colors block">
-                                        {link}
-                                    </a>
+                            {[
+                                { name: 'Home', href: '#home' },
+                                { name: 'About Us', href: '#about' },
+                                { name: 'Coaching Plans', href: '#services' },
+                                { name: 'Success Stories', href: '#testimonials' },
+                                { name: 'Contact', onClick: onContactClick }
+                            ].map((link) => (
+                                <li key={link.name}>
+                                    {link.onClick ? (
+                                        <button
+                                            onClick={link.onClick}
+                                            className="hover:text-brand-light transition-colors block text-left"
+                                        >
+                                            {link.name}
+                                        </button>
+                                    ) : (
+                                        <a href={link.href} className="hover:text-brand-light transition-colors block">
+                                            {link.name}
+                                        </a>
+                                    )}
                                 </li>
                             ))}
                         </ul>

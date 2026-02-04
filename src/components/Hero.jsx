@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Hero = ({ onContactClick }) => {
     return (
-        <section className="relative md:min-h-screen py-20 md:py-24 flex md:items-center bg-gradient-to-br from-brand-mint via-white to-brand-light/30">
+        <section id="home" className="relative md:min-h-screen py-20 md:py-24 flex md:items-center bg-gradient-to-br from-brand-mint via-white to-brand-light/30">
             {/* Abstract Background Shapes */}
             <motion.div
                 animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
