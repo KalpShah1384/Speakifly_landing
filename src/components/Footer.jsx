@@ -18,7 +18,7 @@ const Footer = ({ onContactClick }) => {
                         <div className="flex gap-4">
                             {[
                                 { Icon: Instagram, href: "https://www.instagram.com/speakifly.25?igsh=MW41aXZ5ZWE3cjcwbw==" },
-                                { Icon: MessageCircle, href: "https://wa.me/919876543210" } // Placeholder WhatsApp link
+                                { Icon: MessageCircle, href: "https://chat.whatsapp.com/BeADeQcxa5d6T1YWXCOviZ?mode=gi_t" } // Updated WhatsApp group link
                             ].map(({ Icon, href }, i) => (
                                 <a
                                     key={i}
@@ -57,7 +57,7 @@ const Footer = ({ onContactClick }) => {
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone className="text-brand-secondary" size={18} />
-                                <span>+91 98765 43210</span>
+                                <span>+91 81549 85089</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail className="text-brand-secondary" size={18} />

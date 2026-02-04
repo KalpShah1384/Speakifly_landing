@@ -10,6 +10,7 @@ import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import ContactModal from './components/ContactModal';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -40,6 +41,7 @@ function App() {
         onClose={() => setIsModalOpen(false)}
         initialSubject={modalSubject}
       />
+      <FloatingWhatsApp />
     </div>
   );
 }

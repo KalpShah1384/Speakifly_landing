@@ -2,23 +2,27 @@
 
 @theme {
   /* User-provided palette */
-  --color-brand-primary: #3674B5;
-  --color-brand-secondary: #578FCA;
-  --color-brand-light: #A1E3F9;
-  --color-brand-mint: #D1F8EF;
+  --color-brand-primary: #0F2854;
+  /* Deep Navy */
+  --color-brand-secondary: #1C4D8D;
+  /* Ocean Blue */
+  --color-brand-light: #4988C4;
+  /* Sky Blue */
+  --color-brand-mint: #BDE8F5;
+  /* Pale Azure */
   --color-brand-dark: #0f172a;
 
   /* Aliases for numeric scale used in components */
   --color-brand-900: #0f172a;
-  --color-brand-800: #3674B5;
-  --color-brand-700: #578FCA;
-  --color-brand-600: #578FCA;
-  --color-brand-500: #A1E3F9;
+  --color-brand-800: #0F2854;
+  --color-brand-700: #1C4D8D;
+  --color-brand-600: #4988C4;
+  --color-brand-500: #BDE8F5;
 
   /* Legacy aliases */
-  --color-brand-accent: #3674B5;
-  --color-brand-teal: #A1E3F9;
-  --color-brand-highlight: #D1F8EF;
+  --color-brand-accent: #0F2854;
+  --color-brand-teal: #BDE8F5;
+  --color-brand-highlight: #BDE8F5;
 
   --font-sans: "Inter", "system-ui", sans-serif;
   --font-display: "Outfit", sans-serif;
