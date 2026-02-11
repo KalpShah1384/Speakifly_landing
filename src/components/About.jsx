@@ -78,7 +78,7 @@ const About = () => {
                                             transition={{ delay: 0.7 }}
                                             className="text-slate-600 leading-relaxed mb-8"
                                         >
-                                            "Our mission is to bridge the gap between your current English proficiency and your dream IELTS score through dedicated mentorship and personalized strategies."
+                                            "Our mission is to bridge the gap between your current English proficiency and your communication goals through dedicated mentorship and personalized strategies."
                                         </motion.p>
                                         <div className="w-full h-px bg-slate-100 mb-8"></div>
                                         <div className="grid grid-cols-2 gap-4 w-full text-left">
@@ -120,7 +120,7 @@ const About = () => {
                             transition={{ delay: 0.1 }}
                             className="text-4xl md:text-5xl font-display font-bold text-brand-dark mb-8 leading-tight"
                         >
-                            Elevating Your IELTS Journey Since 2021
+                            Elevating Your Communication & IELTS Journey Since 2021
                         </motion.h3>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}

@@ -11,10 +11,10 @@ const Testimonials = () => {
             text: "Speakifly changed my whole perspective on IELTS. I was stuck at 6.5 for months, but their writing templates helped me score a 7.5 in writing and 8.0 overall!"
         },
         {
-            name: "Rahul Verma",
-            score: "Band 7.5",
-            image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
-            text: "The mock tests are exactly like the real exam. The feedback I got for my speaking sessions was incredibly detailed and helpful."
+            name: "Sneha Patel",
+            score: "Communication Mastery",
+            image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+            text: "The Communication Program was exactly what I needed for my career. The 1-on-1 speaking practice and role plays gave me the confidence to ace my job interviews!"
         },
         {
             name: "Anjali Gupta",

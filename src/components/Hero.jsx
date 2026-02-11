@@ -33,7 +33,7 @@ const Hero = ({ onContactClick }) => {
                         className="inline-flex items-center gap-2 bg-white border border-brand-light px-4 py-2 rounded-full shadow-sm text-sm font-semibold text-brand-primary"
                     >
                         <span className="w-2 h-2 rounded-full bg-brand-secondary animate-pulse"></span>
-                        #1 Rated IELTS Coaching
+                        #1 Rated IELTS & Communication Coaching
                     </motion.div>
 
                     <motion.h1
@@ -52,7 +52,7 @@ const Hero = ({ onContactClick }) => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-lg text-slate-600 leading-relaxed max-w-lg"
                     >
-                        Unlock your potential with personalized IELTS coaching designed to get you the band score you need. Expert guidance using our proven strategies.
+                        Unlock your potential with personalized coaching designed to get you the results you need. Professional guidance for IELTS and Communication mastery.
                     </motion.p>
 
                     <motion.div
@@ -80,7 +80,7 @@ const Hero = ({ onContactClick }) => {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="pt-8 grid grid-cols-2 gap-4"
                     >
-                        {['Band 8+ Specialists', '1-on-1 Attention', 'Mock Tests Included', 'Flexible Schedule'].map((item) => (
+                        {['Guaranteed Results', '1-on-1 Attention', 'Mock Tests Included', 'Flexible Schedule'].map((item) => (
                             <div key={item} className="flex items-center gap-2 text-slate-700 font-medium">
                                 <CheckCircle className="text-brand-secondary h-5 w-5" />
                                 {item}
@@ -105,21 +105,6 @@ const Hero = ({ onContactClick }) => {
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/20 to-transparent pointer-events-none"></div>
-                    </motion.div>
-
-                    {/* Floating Card */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="absolute bottom-2 md:-bottom-8 left-2 md:-left-8 bg-white p-3 md:p-5 rounded-2xl shadow-xl border border-brand-mint flex items-center gap-3 md:gap-4 z-20"
-                    >
-                        <div className="bg-brand-mint p-2 md:p-3 rounded-full">
-                            <span className="text-xl md:text-2xl">🌟</span>
-                        </div>
-                        <div>
-                            <p className="text-[10px] md:text-sm text-slate-500 font-medium whitespace-nowrap">Average Score</p>
-                            <p className="text-xs md:text-xl font-bold text-brand-primary whitespace-nowrap">Band 7.5+</p>
-                        </div>
                     </motion.div>
 
                     {/* Another Floating Card */}

@@ -10,9 +10,45 @@ const Services = ({ onContactClick }) => {
             duration: "2 Weeks",
             features: [
                 "10 Hours of Live Classes",
-                "2 Mock Tests (Reading & Listening)",
+                "2 Full-Length Mock Tests",
                 "Basic Writing Evaluation",
                 "Speaking Tips & Tricks"
+            ],
+            recommended: false
+        },
+        {
+            name: "Grammar Drill",
+            price: "₹749",
+            duration: "2 Weeks",
+            features: [
+                "Live Classes",
+                "Daily Speaking Practices",
+                "Comprehensive Grammar Notes",
+                "Interactive Role Plays"
+            ],
+            recommended: false
+        },
+        {
+            name: "Communication Program",
+            price: "₹3,500",
+            duration: "4 Weeks",
+            features: [
+                "Live Classes",
+                "Complete Grammar Notes",
+                "Real-world Role Plays",
+                "1-on-1 Speaking Practice"
+            ],
+            recommended: true
+        },
+        {
+            name: "Confidence Program",
+            price: "₹18,000",
+            duration: "4 Months",
+            features: [
+                "1-on-1 Live Classes",
+                "Recorded Lecture Access",
+                "Confidence Building Activities",
+                "Advance Grammar & Interview Prep"
             ],
             recommended: false
         },
@@ -27,7 +63,7 @@ const Services = ({ onContactClick }) => {
                 "1-on-1 Speaking Interviews (5)",
                 "Daily Grammar Drills"
             ],
-            recommended: true
+            recommended: false
         },
         {
             name: "Personal Mentorship",
@@ -59,7 +95,7 @@ const Services = ({ onContactClick }) => {
                     </h3>
                 </motion.div>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {plans.map((plan, index) => (
                         <motion.div
                             key={index}

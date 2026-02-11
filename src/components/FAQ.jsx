@@ -7,28 +7,24 @@ const FAQ = () => {
 
     const faqs = [
         {
-            question: "Is Isha Shah teaching all sessions personally?",
-            answer: "Yes, Isha Shah personally conducts the 1-on-1 personalized sessions to ensure every student receives the highest quality mentorship and attention needed for their target band score."
-        },
-        {
             question: "Do you offer both Online and Offline classes?",
             answer: "Yes! Based in Vadodara, we provide physical offline classes. For students outside Vadodara or those who prefer flexibility, we offer high-quality interactive online sessions."
         },
         {
-            question: "How long is the typical IELTS coaching duration?",
-            answer: "Our plans range from a 2-week Crash Course for quick polishing to a 4-week Comprehensive plan. We also have 'Until Exam' mentorship for long-term support."
+            question: "How long is the typical coaching duration?",
+            answer: "Our plans range from a 2-week Grammar Drill or Crash Course for quick results to a 4-month Confidence Program for long-term mastery."
         },
         {
             question: "Are mock tests and study materials included?",
-            answer: "Absolutely. Depending on your plan, we include multiple full-length mock tests (Reading & Listening) and unlimited Writing evaluations. All essential Band 9 strategy materials are provided."
+            answer: "Absolutely. Depending on your plan, we include multiple full-length mock tests and comprehensive study notes. All essential strategies and materials are provided."
         },
         {
             question: "Can I get a free demo class before enrolling?",
             answer: "Yes, we encourage students to book a free demo class. This helps you understand our teaching methodology and see if our personalized approach fits your needs."
         },
         {
-            question: "What is your success rate for Band 7.5+?",
-            answer: "Over the past 5 years in Vadodara, we have maintained an excellent success rate, with majority of our students achieving Band 7.5 and above in their first attempt."
+            question: "What is your success rate?",
+            answer: "Over the past 5 years in Vadodara, we have maintained an excellent success rate, with students consistently achieving their desired results in both IELTS and professional communication."
         }
     ];
 
@@ -52,7 +48,7 @@ const FAQ = () => {
                         Common Questions
                     </h2>
                     <p className="text-slate-600 text-lg">
-                        Everything you need to know about starting your IELTS journey with Speakifly.
+                        Everything you need to know about starting your journey with Speakifly.
                     </p>
                 </motion.div>
 
